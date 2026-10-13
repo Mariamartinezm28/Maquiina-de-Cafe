@@ -13,7 +13,7 @@ let cantAzucar = 1000;  Gramos
 let cantTe = 500;  Gramos
 
 
-ENTRADAS: INVENTARIO MONEDAS Y BILLETES
+INVENTARIO MONEDAS Y BILLETES
 
 
 let moneda200 = 20;
@@ -24,3 +24,16 @@ let billete2000 = 15;
 let billete5000 = 10;
 let billete10000 = 5;
 let billete20000 = 2;
+
+
+
+SALIDAS
+
+
+let entregarCafe = false;
+let entregarTe = false;
+
+Reglas de billetes no aceptados
+const noAcepta1000 = 1000;
+const noAcepta50000 = 50000;
+const noAcepta100000 = 100000;
