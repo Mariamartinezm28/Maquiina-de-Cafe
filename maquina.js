@@ -37,3 +37,33 @@ Reglas de billetes no aceptados
 const noAcepta1000 = 1000;
 const noAcepta50000 = 50000;
 const noAcepta100000 = 100000;
+
+
+
+
+RECETAS DE LOS PRODUCTOS
+
+
+Tinto Clásico
+const aguaTinto = 120;
+const cafeTinto = 6;
+
+Tinto Dulce
+const aguaTintoDulce = 120;
+const cafeTintoDulce = 6;
+const azucarTintoDulce = 5;
+
+Pintadito
+const aguaPintadito = 60;
+const lechePintadito = 60;
+const cafePintadito = 7;
+
+Té Endulzado
+const aguaTeDulce = 150;
+const gramosTeDulce = 4;
+const azucarTeDulce = 5;
+
+Leche Caliente
+const lecheSola = 150;
+const azucarLeche = 4;
+
