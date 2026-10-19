@@ -108,3 +108,16 @@ cantLeche = cantLeche - lecheSola;
 cantAzucar = cantAzucar - azucarLeche;
 cantVaso = cantVaso - 1;
 
+
+/* OPCIONES SALDO DEL USUARIO */
+
+
+let precioCafe = 2000;
+
+saldoActual == precioCafe;
+saldoActual === precioCafe;
+saldoActual != precioCafe;
+saldoActual > precioCafe;
+saldoActual < precioCafe;
+saldoActual >= precioCafe;
+saldoActual <= precioCafe
