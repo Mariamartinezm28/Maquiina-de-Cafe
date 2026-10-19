@@ -67,3 +67,12 @@ Leche Caliente
 const lecheSola = 150;
 const azucarLeche = 4;
 
+
+RECETAS
+
+/* TINTO CLASICO */
+
+cantAgua = cantAgua - aguaTinto;
+cantCafe = cantCafe - cafeTinto;
+cantVaso = cantVaso - 1;
+
