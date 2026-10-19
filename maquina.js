@@ -102,3 +102,9 @@ cantVaso = cantVaso - 1;
 
 
 
+/* LECHE CALIENTE */
+
+cantLeche = cantLeche - lecheSola;
+cantAzucar = cantAzucar - azucarLeche;
+cantVaso = cantVaso - 1;
+
