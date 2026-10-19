@@ -76,3 +76,11 @@ cantAgua = cantAgua - aguaTinto;
 cantCafe = cantCafe - cafeTinto;
 cantVaso = cantVaso - 1;
 
+
+/* TINTO DULCE */
+
+cantAgua = cantAgua - aguaTintoDulce;
+cantCafe = cantCafe - cafeTintoDulce;
+cantAzucar = cantAzucar - azucarTintoDulce;
+cantVaso = cantVaso - 1;
+
