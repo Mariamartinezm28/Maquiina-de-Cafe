@@ -93,4 +93,12 @@ cantCafe = cantCafe - cafePintadito;
 cantVaso = cantVaso - 1;
 
 
+/* TE ENDULZADO */
+
+cantAgua = cantAgua - aguaTeDulce;
+cantTe = cantTe - gramosTeDulce;
+cantAzucar = cantAzucar - azucarTeDulce;
+cantVaso = cantVaso - 1;
+
+
 
