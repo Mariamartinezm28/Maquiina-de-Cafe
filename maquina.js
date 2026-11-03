@@ -1,4 +1,5 @@
 MAQUINA DE CAFE
+
 UNIDADES: $, Gramos, Mililitros
 
 ENTRADAS: INVENTARIO DE INGREDIENTES
@@ -12,7 +13,13 @@ let cantVaso = 100;  Unidades
 let cantAzucar = 1000;  Gramos
 let cantTe = 500;  Gramos
 
+if (cantCafe < 100 || cantLeche < 200 || cantAgua < 100 || cantVaso < 10 || cantAzucar < 100 || cantTe < 10) {
+     console.log("La máquina necesita recargar ingredientes.") 
 
+     } else {
+     console.log("La máquina tiene inventario suficiente para preparar bebidas.")
+     }
+     
 INVENTARIO MONEDAS Y BILLETES
 
 
@@ -121,3 +128,5 @@ saldoActual > precioCafe;
 saldoActual < precioCafe;
 saldoActual >= precioCafe;
 saldoActual <= precioCafe
+
+
