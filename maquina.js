@@ -33,6 +33,12 @@ let billete10000 = 5;
 let billete20000 = 2;
 
 
+if (moneda200 < 5 || moneda500 < 5 || moneda1000 < 3 || billete2000 < 2 || billete5000 < 3 || billete10000 < 2 || billete20000 < 2) {
+    console.log(" La máquina tiene poco dinero para devolver cambio.");
+
+} else {
+    console.log("La máquina tiene dinero suficiente para devolver cambio.");
+}
 
 SALIDAS
 
