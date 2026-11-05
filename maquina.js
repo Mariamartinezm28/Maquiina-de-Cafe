@@ -19,9 +19,19 @@ if (cantCafe < 100 || cantLeche < 200 || cantAgua < 100 || cantVaso < 10 || cant
      } else {
      console.log("La máquina tiene inventario suficiente para preparar bebidas.")
      }
+
+
+// Precio de las bebidas
+
+let precioTintoClasico = 2000;
+let precioTintoDulce = 2500;
+let precioPintadito = 3000;
+let precioTeEndulzado = 3500;
+let precioLecheCaliente = 2500;
+
+
      
 // INVENTARIO MONEDAS Y BILLETES
-
 
 let moneda200 = 20;
 let moneda500 = 20;
