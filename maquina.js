@@ -1,17 +1,17 @@
 //MAQUINA DE CAFE
 
-UNIDADES: $, Gramos, Mililitros
+// UNIDADES: $, Gramos, Mililitros
 
 //ENTRADAS: INVENTARIO DE INGREDIENTES
 
-let saldoActual = 0;  $
+let saldoActual = 0;  //$
 
-let cantCafe = 1000;  Gramos
-let cantLeche = 3000;  Mililitros
-let cantAgua = 5000;  Mililitros
-let cantVaso = 100;  Unidades
-let cantAzucar = 1000;  Gramos
-let cantTe = 500;  Gramos
+let cantCafe = 1000;  // Gramos
+let cantLeche = 3000;  // Mililitros
+let cantAgua = 5000;  // Mililitros
+let cantVaso = 100;  //Unidades
+let cantAzucar = 1000;  //Gramos
+let cantTe = 500;  //Gramos
 
 if (cantCafe < 100 || cantLeche < 200 || cantAgua < 100 || cantVaso < 10 || cantAzucar < 100 || cantTe < 10) {
      console.log("La máquina necesita recargar ingredientes.") 
@@ -50,8 +50,7 @@ if (moneda200 < 5 || moneda500 < 5 || moneda1000 < 3 || billete2000 < 2 || bille
     console.log("La máquina tiene dinero suficiente para devolver cambio.");
 }
 
-SALIDAS
-
+// SALIDAS
 
 let entregarCafe = false;
 let entregarTe = false;
