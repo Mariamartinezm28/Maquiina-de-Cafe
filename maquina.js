@@ -1,8 +1,8 @@
-MAQUINA DE CAFE
+//MAQUINA DE CAFE
 
 UNIDADES: $, Gramos, Mililitros
 
-ENTRADAS: INVENTARIO DE INGREDIENTES
+//ENTRADAS: INVENTARIO DE INGREDIENTES
 
 let saldoActual = 0;  $
 
@@ -20,16 +20,16 @@ if (cantCafe < 100 || cantLeche < 200 || cantAgua < 100 || cantVaso < 10 || cant
      console.log("La máquina tiene inventario suficiente para preparar bebidas.")
      }
      
-INVENTARIO MONEDAS Y BILLETES
+// INVENTARIO MONEDAS Y BILLETES
 
 
 let moneda200 = 20;
 let moneda500 = 20;
 let moneda1000 = 10;
 
-let billete2000 = 15;
+let billete2000 = 20;
 let billete5000 = 10;
-let billete10000 = 5;
+let billete10000 = 20;
 let billete20000 = 2;
 
 
@@ -46,7 +46,7 @@ SALIDAS
 let entregarCafe = false;
 let entregarTe = false;
 
-Reglas de billetes no aceptados
+// Reglas de billetes no aceptados
 const noAcepta1000 = 1000;
 const noAcepta50000 = 50000;
 const noAcepta100000 = 100000;
@@ -54,43 +54,45 @@ const noAcepta100000 = 100000;
 
 
 
-RECETAS DE LOS PRODUCTOS
+//RECETAS DE LOS PRODUCTOS
 
 
-Tinto Clásico
+// Tinto Clásico
+
 const aguaTinto = 120;
 const cafeTinto = 6;
 
-Tinto Dulce
+// Tinto Dulce
+
 const aguaTintoDulce = 120;
 const cafeTintoDulce = 6;
 const azucarTintoDulce = 5;
 
-Pintadito
+// Pintadito
 const aguaPintadito = 60;
 const lechePintadito = 60;
 const cafePintadito = 7;
 
-Té Endulzado
+// Té Endulzado
 const aguaTeDulce = 150;
 const gramosTeDulce = 4;
 const azucarTeDulce = 5;
 
-Leche Caliente
+// Leche Caliente
 const lecheSola = 150;
 const azucarLeche = 4;
 
 
 RECETAS
 
-/* TINTO CLASICO */
+// TINTO CLASICO 
 
 cantAgua = cantAgua - aguaTinto;
 cantCafe = cantCafe - cafeTinto;
 cantVaso = cantVaso - 1;
 
 
-/* TINTO DULCE */
+// TINTO DULCE
 
 cantAgua = cantAgua - aguaTintoDulce;
 cantCafe = cantCafe - cafeTintoDulce;
@@ -98,7 +100,7 @@ cantAzucar = cantAzucar - azucarTintoDulce;
 cantVaso = cantVaso - 1;
 
 
-/* PINTADITO */
+// PINTADITO
 
 cantAgua = cantAgua - aguaPintadito;
 cantLeche = cantLeche - lechePintadito;
@@ -106,7 +108,7 @@ cantCafe = cantCafe - cafePintadito;
 cantVaso = cantVaso - 1;
 
 
-/* TE ENDULZADO */
+// TÉ ENDULZADO
 
 cantAgua = cantAgua - aguaTeDulce;
 cantTe = cantTe - gramosTeDulce;
@@ -115,14 +117,14 @@ cantVaso = cantVaso - 1;
 
 
 
-/* LECHE CALIENTE */
+// LECHE CALIENTE
 
 cantLeche = cantLeche - lecheSola;
 cantAzucar = cantAzucar - azucarLeche;
 cantVaso = cantVaso - 1;
 
 
-/* OPCIONES SALDO DEL USUARIO */
+// OPCIONES SALDO DEL USUARIO
 
 
 let precioCafe = 2000;
