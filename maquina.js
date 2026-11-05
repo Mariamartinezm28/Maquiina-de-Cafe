@@ -83,46 +83,56 @@ const lecheSola = 150;
 const azucarLeche = 4;
 
 
-RECETAS
 
-// TINTO CLASICO 
-
-cantAgua = cantAgua - aguaTinto;
-cantCafe = cantCafe - cafeTinto;
-cantVaso = cantVaso - 1;
+// MENU
 
 
-// TINTO DULCE
+let menu = prompt("Seleccione la bebida que desea: Tinto Clasico, Tinto Dulce, Pintadito, Té Endulzado, Leche Caliente");
 
-cantAgua = cantAgua - aguaTintoDulce;
-cantCafe = cantCafe - cafeTintoDulce;
-cantAzucar = cantAzucar - azucarTintoDulce;
-cantVaso = cantVaso - 1;
+switch (menu) {
+    case "Tinto Clasico":
 
+        cantAgua = cantAgua - aguaTinto;
+        cantCafe = cantCafe - cafeTinto;
+        cantVaso = cantVaso - 1;
+        entregarCafe = true;
+     break;
+     
+     case "Tinto Dulce":
+        cantAgua = cantAgua - aguaTintoDulce;
+        cantCafe = cantCafe - cafeTintoDulce;
+        cantAzucar = cantAzucar - azucarTintoDulce;
+        cantVaso = cantVaso - 1;
+        entregarCafe = true;
+     break;
 
-// PINTADITO
+     case "Pintadito":
+        cantAgua = cantAgua - aguaPintadito;
+        cantLeche = cantLeche - lechePintadito;
+        cantCafe = cantCafe - cafePintadito;
+        cantVaso = cantVaso - 1;
+        entregarCafe = true;
+     break;
 
-cantAgua = cantAgua - aguaPintadito;
-cantLeche = cantLeche - lechePintadito;
-cantCafe = cantCafe - cafePintadito;
-cantVaso = cantVaso - 1;
+     case "Té Endulzado":
+        cantAgua = cantAgua - aguaTeDulce;
+        cantTe = cantTe - gramosTeDulce;
+        cantAzucar = cantAzucar - azucarTeDulce;
+        cantVaso = cantVaso - 1;
+        entregarCafe = true;
+     break;
 
+     case "Leche Caliente":
+        cantLeche = cantLeche - lecheSola;
+        cantAzucar = cantAzucar - azucarLeche;
+        cantVaso = cantVaso - 1;
+        entregarCafe = true;
+     break;
 
-// TÉ ENDULZADO
-
-cantAgua = cantAgua - aguaTeDulce;
-cantTe = cantTe - gramosTeDulce;
-cantAzucar = cantAzucar - azucarTeDulce;
-cantVaso = cantVaso - 1;
-
-
-
-// LECHE CALIENTE
-
-cantLeche = cantLeche - lecheSola;
-cantAzucar = cantAzucar - azucarLeche;
-cantVaso = cantVaso - 1;
-
+     default:
+        console.log("Opción no válida. Por favor, seleccione una bebida del menú.");
+     break;
+}
 
 // OPCIONES SALDO DEL USUARIO
 
