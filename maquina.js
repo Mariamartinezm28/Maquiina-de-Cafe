@@ -96,50 +96,65 @@ const azucarLeche = 4;
 // MENU
 
 
-let menu = prompt("Seleccione la bebida que desea: Tinto Clasico, Tinto Dulce, Pintadito, Té Endulzado, Leche Caliente");
+let menu = prompt("Seleccione la bebida que desea: 1. Tinto Clasico, 2. Tinto Dulce, 3. Pintadito, 4. Té Endulzado, 5. Leche Caliente");
 
 switch (menu) {
-    case "Tinto Clasico":
+    case "1":
 
         cantAgua = cantAgua - aguaTinto;
         cantCafe = cantCafe - cafeTinto;
         cantVaso = cantVaso - 1;
         entregarCafe = true;
+
+        alert("Su tinto clasico esta listo!");
+
      break;
      
-     case "Tinto Dulce":
+     case "2":
         cantAgua = cantAgua - aguaTintoDulce;
         cantCafe = cantCafe - cafeTintoDulce;
         cantAzucar = cantAzucar - azucarTintoDulce;
         cantVaso = cantVaso - 1;
         entregarCafe = true;
+
+        alert("Su tinto dulce esta listo!");
+        
      break;
 
-     case "Pintadito":
+     case "3":
         cantAgua = cantAgua - aguaPintadito;
         cantLeche = cantLeche - lechePintadito;
         cantCafe = cantCafe - cafePintadito;
         cantVaso = cantVaso - 1;
         entregarCafe = true;
+
+        alert("Su pintadito esta listo!");
+
      break;
 
-     case "Té Endulzado":
+     case "4":
         cantAgua = cantAgua - aguaTeDulce;
         cantTe = cantTe - gramosTeDulce;
         cantAzucar = cantAzucar - azucarTeDulce;
         cantVaso = cantVaso - 1;
         entregarCafe = true;
+
+        alert("Su té endulzado esta listo!");
+
      break;
 
-     case "Leche Caliente":
+     case "5":
         cantLeche = cantLeche - lecheSola;
         cantAzucar = cantAzucar - azucarLeche;
         cantVaso = cantVaso - 1;
         entregarCafe = true;
+
+        alert("Su leche caliente esta lista!");
+
      break;
 
      default:
-        console.log("Opción no válida. Por favor, seleccione una bebida del menú.");
+        alert("Opción no válida. Por favor, seleccione una bebida del menú.");
      break;
 }
 
