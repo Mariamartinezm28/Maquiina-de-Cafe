@@ -93,8 +93,10 @@ const lecheSola = 150;
 const azucarLeche = 4;
 
 
-function cobrarBebida(){
+function cobrarBebida(saldoActual, precioCafe) {
    let mensaje;
+   
+   saldoActual = parseInt(prompt("Ingrese el saldo actual:"));
 
    if (saldoActual >= precioCafe) {
       mensaje = "Su bebida ha sido pagada con éxito.";
@@ -103,8 +105,7 @@ function cobrarBebida(){
       mensaje = "Saldo insuficiente. Por favor, agregue más dinero.";
    }
    
-   return mensaje;
-
+   return alert(mensaje);
 }
 // MENU
 
@@ -113,8 +114,7 @@ let menu = prompt("Seleccione la bebida que desea: 1. Tinto Clasico, 2. Tinto Du
 
 switch (menu) {
     case "1":
-        precioCafe = precioTintoClasico;
-        cobrarBebida();
+        cobrarBebida(saldoActual, precioTintoClasico);
         cantAgua = cantAgua - aguaTinto;
         cantCafe = cantCafe - cafeTinto;
         cantVaso = cantVaso - 1;
