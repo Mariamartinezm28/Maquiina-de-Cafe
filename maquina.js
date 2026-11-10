@@ -54,6 +54,7 @@ if (moneda200 < 5 || moneda500 < 5 || moneda1000 < 3 || billete2000 < 2 || bille
 
 let entregarCafe = false;
 let entregarTe = false;
+let precioCafe = 0;
 
 // Reglas de billetes no aceptados
 const noAcepta1000 = 1000;
@@ -92,7 +93,19 @@ const lecheSola = 150;
 const azucarLeche = 4;
 
 
+function cobrarBebida(){
+   let mensaje;
 
+   if (saldoActual >= precioCafe) {
+      mensaje = "Su bebida ha sido pagada con éxito.";
+   }
+   else {
+      mensaje = "Saldo insuficiente. Por favor, agregue más dinero.";
+   }
+   
+   return mensaje;
+
+}
 // MENU
 
 
@@ -100,7 +113,8 @@ let menu = prompt("Seleccione la bebida que desea: 1. Tinto Clasico, 2. Tinto Du
 
 switch (menu) {
     case "1":
-
+        precioCafe = precioTintoClasico;
+        cobrarBebida();
         cantAgua = cantAgua - aguaTinto;
         cantCafe = cantCafe - cafeTinto;
         cantVaso = cantVaso - 1;
@@ -111,6 +125,8 @@ switch (menu) {
      break;
      
      case "2":
+        precioCafe = precioTintoDulce;
+        cobrarBebida();
         cantAgua = cantAgua - aguaTintoDulce;
         cantCafe = cantCafe - cafeTintoDulce;
         cantAzucar = cantAzucar - azucarTintoDulce;
@@ -122,6 +138,8 @@ switch (menu) {
      break;
 
      case "3":
+        precioCafe = precioPintadito;
+        cobrarBebida();
         cantAgua = cantAgua - aguaPintadito;
         cantLeche = cantLeche - lechePintadito;
         cantCafe = cantCafe - cafePintadito;
@@ -133,6 +151,8 @@ switch (menu) {
      break;
 
      case "4":
+        precioCafe = precioTeDulce;
+        CobrarBebida();
         cantAgua = cantAgua - aguaTeDulce;
         cantTe = cantTe - gramosTeDulce;
         cantAzucar = cantAzucar - azucarTeDulce;
@@ -144,6 +164,8 @@ switch (menu) {
      break;
 
      case "5":
+        precioCafe = precioLecheCaliente;
+        cobrarBebida();
         cantLeche = cantLeche - lecheSola;
         cantAzucar = cantAzucar - azucarLeche;
         cantVaso = cantVaso - 1;
@@ -157,18 +179,3 @@ switch (menu) {
         alert("Opción no válida. Por favor, seleccione una bebida del menú.");
      break;
 }
-
-// OPCIONES SALDO DEL USUARIO
-
-
-let precioCafe = 2000;
-
-saldoActual == precioCafe;
-saldoActual === precioCafe;
-saldoActual != precioCafe;
-saldoActual > precioCafe;
-saldoActual < precioCafe;
-saldoActual >= precioCafe;
-saldoActual <= precioCafe
-
-
