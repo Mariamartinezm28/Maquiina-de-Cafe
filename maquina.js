@@ -95,17 +95,23 @@ const azucarLeche = 4;
 
 function cobrarBebida(saldoActual, precioCafe) {
    let mensaje;
+
+   alert("El precio de la bebida es: " + precioCafe + "pesos.");
    
-   saldoActual = parseInt(prompt("Ingrese el saldo actual:"));
+   saldoActual = parseInt(prompt("Ingrese su dinero:"));
+
 
    if (saldoActual >= precioCafe) {
       mensaje = "Su bebida ha sido pagada con éxito.";
+      alert(mensaje);
+      return true;
    }
    else {
       mensaje = "Saldo insuficiente. Por favor, agregue más dinero.";
+      alert(mensaje);
+      return false;
    }
    
-   return alert(mensaje);
 }
 // MENU
 
@@ -114,64 +120,78 @@ let menu = prompt("Seleccione la bebida que desea: 1. Tinto Clasico, 2. Tinto Du
 
 switch (menu) {
     case "1":
-        cobrarBebida(saldoActual, precioTintoClasico);
-        cantAgua = cantAgua - aguaTinto;
-        cantCafe = cantCafe - cafeTinto;
-        cantVaso = cantVaso - 1;
-        entregarCafe = true;
+        if (cobrarBebida(saldoActual, precioTintoClasico) == true) {
+            cantAgua = cantAgua - aguaTinto;
+            cantCafe = cantCafe - cafeTinto;
+            cantVaso = cantVaso - 1;
+            entregarCafe = true;
 
-        alert("Su tinto clasico esta listo!");
+         alert("Su tinto clasico esta listo!");
+
+        }
+
 
      break;
      
      case "2":
         precioCafe = precioTintoDulce;
-        cobrarBebida();
-        cantAgua = cantAgua - aguaTintoDulce;
-        cantCafe = cantCafe - cafeTintoDulce;
-        cantAzucar = cantAzucar - azucarTintoDulce;
-        cantVaso = cantVaso - 1;
-        entregarCafe = true;
+        if (cobrarBebida(saldoActual, precioTintoDulce) == true) {
+            cantAgua = cantAgua - aguaTintoDulce;
+            cantCafe = cantCafe - cafeTintoDulce;
+            cantAzucar = cantAzucar - azucarTintoDulce;
+            cantVaso = cantVaso - 1;
+            entregarCafe = true;
 
-        alert("Su tinto dulce esta listo!");
+         alert("Su tinto dulce esta listo!");
+
+        }
+
         
      break;
 
      case "3":
         precioCafe = precioPintadito;
-        cobrarBebida();
-        cantAgua = cantAgua - aguaPintadito;
-        cantLeche = cantLeche - lechePintadito;
-        cantCafe = cantCafe - cafePintadito;
-        cantVaso = cantVaso - 1;
-        entregarCafe = true;
-
+        if (cobrarBebida(saldoActual, precioPintadito) == true) {
+            cantAgua = cantAgua - aguaPintadito;
+            cantLeche = cantLeche - lechePintadito;
+            cantCafe = cantCafe - cafePintadito;
+            cantVaso = cantVaso - 1;
+            entregarCafe = true;
+        
         alert("Su pintadito esta listo!");
+
+        }
 
      break;
 
      case "4":
         precioCafe = precioTeDulce;
-        CobrarBebida();
-        cantAgua = cantAgua - aguaTeDulce;
-        cantTe = cantTe - gramosTeDulce;
-        cantAzucar = cantAzucar - azucarTeDulce;
-        cantVaso = cantVaso - 1;
-        entregarCafe = true;
+        if (cobrarBebida(saldoActual, precioTeDulce) == true) {
+            cantAgua = cantAgua - aguaTeDulce;
+            cantTe = cantTe - gramosTeDulce;
+            cantAzucar = cantAzucar - azucarTeDulce;
+            cantVaso = cantVaso - 1;
+            entregarCafe = true;
 
-        alert("Su té endulzado esta listo!");
+         alert("Su té endulzado esta listo!");
+
+        }
+
 
      break;
 
      case "5":
         precioCafe = precioLecheCaliente;
-        cobrarBebida();
-        cantLeche = cantLeche - lecheSola;
-        cantAzucar = cantAzucar - azucarLeche;
-        cantVaso = cantVaso - 1;
-        entregarCafe = true;
+        if (cobrarBebida(saldoActual, precioLecheCaliente) == true) {
+            cantLeche = cantLeche - lecheSola;
+            cantAzucar = cantAzucar - azucarLeche;
+            cantVaso = cantVaso - 1;
+            entregarCafe = true;
 
-        alert("Su leche caliente esta lista!");
+          alert("Su leche caliente esta lista!");
+          
+        }
+
 
      break;
 
