@@ -111,8 +111,10 @@ function cobrarBebida(saldoActual, precioCafe) {
       mensaje = "Saldo insuficiente. Le faltan " + (precioCafe - saldoActual) + " pesos.";
       alert(mensaje);
 
-      saldoActual = parseInt(prompt("Ingrese el dinero que falta:"));
+      saldoActual = saldoActual + parseInt(prompt("Ingrese el dinero que falta:"));
+      alert("Su saldo actual es: " + saldoActual + " pesos.");
 
+      
       if (saldoActual >= precioCafe) {
          mensaje = "Su bebida ha sido pagada con éxito.";
          alert(mensaje);
