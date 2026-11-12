@@ -114,7 +114,7 @@ function cobrarBebida(saldoActual, precioCafe) {
       saldoActual = saldoActual + parseInt(prompt("Ingrese el dinero que falta:"));
       alert("Su saldo actual es: " + saldoActual + " pesos.");
 
-      
+
       if (saldoActual >= precioCafe) {
          mensaje = "Su bebida ha sido pagada con éxito.";
          alert(mensaje);
@@ -131,7 +131,7 @@ function cobrarBebida(saldoActual, precioCafe) {
 // MENU
 
 
-let menu = prompt("Seleccione la bebida que desea: 1. Tinto Clasico, 2. Tinto Dulce, 3. Pintadito, 4. Té Endulzado, 5. Leche Caliente");
+let menu = prompt("Seleccione la bebida que desea:\n1. Tinto Clasico\n2. Tinto Dulce\n3. Pintadito\n4. Té Endulzado\n5. Leche Caliente");
 
 switch (menu) {
     case "1":
