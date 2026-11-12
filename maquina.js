@@ -96,7 +96,7 @@ const azucarLeche = 4;
 function cobrarBebida(saldoActual, precioCafe) {
    let mensaje;
 
-   alert("El precio de la bebida es: " + precioCafe + "pesos.");
+   alert("El precio de la bebida es: " + precioCafe + " pesos.");
    
    saldoActual = parseInt(prompt("Ingrese su dinero:"));
 
@@ -107,9 +107,22 @@ function cobrarBebida(saldoActual, precioCafe) {
       return true;
    }
    else {
-      mensaje = "Saldo insuficiente. Por favor, agregue más dinero.";
+      
+      mensaje = "Saldo insuficiente. Le faltan " + (precioCafe - saldoActual) + " pesos.";
       alert(mensaje);
-      return false;
+
+      saldoActual = parseInt(prompt("Ingrese el dinero que falta:"));
+
+      if (saldoActual >= precioCafe) {
+         mensaje = "Su bebida ha sido pagada con éxito.";
+         alert(mensaje);
+         return true;
+      }
+      else {
+         mensaje = "Aun falta dinero. No se puede pagar la bebida.";
+         alert(mensaje);
+         return false;
+      }
    }
    
 }
@@ -189,7 +202,7 @@ switch (menu) {
             entregarCafe = true;
 
           alert("Su leche caliente esta lista!");
-          
+
         }
 
 
