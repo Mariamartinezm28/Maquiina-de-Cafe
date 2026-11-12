@@ -93,6 +93,9 @@ const lecheSola = 150;
 const azucarLeche = 4;
 
 
+//Funcion - Cobrar Bebida
+
+
 function cobrarBebida(saldoActual, precioCafe) {
    let mensaje;
 
@@ -128,6 +131,20 @@ function cobrarBebida(saldoActual, precioCafe) {
    }
    
 }
+
+//Funcion - Agregar AZzucar
+
+function agregarAzucar(precioBebida) {
+
+   let azucarExtra = prompt("¿Desea agregar más azúcar?\n1. Sí (+200 pesos)\n2. No");
+
+   if (azucarExtra == "1") {
+      precioBebida = precioBebida + 200;
+   }
+
+   return precioBebida;
+}
+
 // MENU
 
 
@@ -135,22 +152,24 @@ let menu = prompt("Seleccione la bebida que desea:\n1. Tinto Clasico\n2. Tinto D
 
 switch (menu) {
     case "1":
-        if (cobrarBebida(saldoActual, precioTintoClasico) == true) {
-            cantAgua = cantAgua - aguaTinto;
-            cantCafe = cantCafe - cafeTinto;
-            cantVaso = cantVaso - 1;
-            entregarCafe = true;
 
-         alert("Su tinto clasico esta listo!");
+    precioCafe = agregarAzucar(precioTintoClasico);
 
-        }
+    if (cobrarBebida(saldoActual, precioCafe) == true) {
+        cantAgua = cantAgua - aguaTinto;
+        cantCafe = cantCafe - cafeTinto;
+        cantVaso = cantVaso - 1;
+        entregarCafe = true;
+
+        alert("Su tinto clasico esta listo!");
+    }
 
 
      break;
      
      case "2":
-        precioCafe = precioTintoDulce;
-        if (cobrarBebida(saldoActual, precioTintoDulce) == true) {
+        precioCafe =agregarAzucar(precioTintoDulce);
+        if (cobrarBebida(saldoActual, precioCafe) == true) {
             cantAgua = cantAgua - aguaTintoDulce;
             cantCafe = cantCafe - cafeTintoDulce;
             cantAzucar = cantAzucar - azucarTintoDulce;
@@ -165,8 +184,8 @@ switch (menu) {
      break;
 
      case "3":
-        precioCafe = precioPintadito;
-        if (cobrarBebida(saldoActual, precioPintadito) == true) {
+        precioCafe = agregarAzucar(precioPintadito);
+        if (cobrarBebida(saldoActual, precioCafe) == true) {
             cantAgua = cantAgua - aguaPintadito;
             cantLeche = cantLeche - lechePintadito;
             cantCafe = cantCafe - cafePintadito;
@@ -180,8 +199,8 @@ switch (menu) {
      break;
 
      case "4":
-        precioCafe = precioTeDulce;
-        if (cobrarBebida(saldoActual, precioTeDulce) == true) {
+        precioCafe = agregarAzucar(precioTeDulce);
+        if (cobrarBebida(saldoActual, precioCafe) == true) {
             cantAgua = cantAgua - aguaTeDulce;
             cantTe = cantTe - gramosTeDulce;
             cantAzucar = cantAzucar - azucarTeDulce;
@@ -192,12 +211,11 @@ switch (menu) {
 
         }
 
-
      break;
 
      case "5":
-        precioCafe = precioLecheCaliente;
-        if (cobrarBebida(saldoActual, precioLecheCaliente) == true) {
+        precioCafe = agregarAzucar(precioLecheCaliente);
+        if (cobrarBebida(saldoActual, precioCafe) == true) {
             cantLeche = cantLeche - lecheSola;
             cantAzucar = cantAzucar - azucarLeche;
             cantVaso = cantVaso - 1;
@@ -206,7 +224,6 @@ switch (menu) {
           alert("Su leche caliente esta lista!");
 
         }
-
 
      break;
 
