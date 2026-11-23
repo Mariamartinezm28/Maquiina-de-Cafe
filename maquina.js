@@ -97,39 +97,81 @@ const azucarLeche = 4;
 
 
 function cobrarBebida(saldoActual, precioCafe) {
-   let mensaje;
+    let mensaje;
 
-   alert("El precio de la bebida es: " + precioCafe + " pesos.");
-   
-   saldoActual = parseInt(prompt("Ingrese su dinero:"));
+    alert("El precio de la bebida es: " + precioCafe + " pesos.");
+    saldoActual = parseInt(prompt("Ingrese su dinero:"));
 
+    if (saldoActual >= precioCafe) {
 
-   if (saldoActual >= precioCafe) {
-      mensaje = "Su bebida ha sido pagada con éxito.";
-      alert(mensaje);
-      return true;
-   }
-   else {
-      
-      mensaje = "Saldo insuficiente. Le faltan " + (precioCafe - saldoActual) + " pesos.";
-      alert(mensaje);
+        let cambio = saldoActual - precioCafe;
 
-      saldoActual = saldoActual + parseInt(prompt("Ingrese el dinero que falta:"));
-      alert("Su saldo actual es: " + saldoActual + " pesos.");
+        if (comprobarCambio(cambio) == true) {
 
+            if (cambio > 0) {
+                devolverCambio(cambio);
+            }
 
-      if (saldoActual >= precioCafe) {
-         mensaje = "Su bebida ha sido pagada con éxito.";
-         alert(mensaje);
-         return true;
-      }
-      else {
-         mensaje = "Aun falta dinero. No se puede pagar la bebida.";
-         alert(mensaje);
-         return false;
-      }
-   }
-   
+            mensaje = "Su bebida ha sido pagada con éxito.";
+            alert(mensaje);
+            return true;
+
+        } else {
+
+            alert("No tenemos cambio exacto. Se cancela la compra.");
+
+            if (comprobarCambio(saldoActual) == true) {
+                devolverCambio(saldoActual);
+                alert("Se devolvió todo su dinero.");
+            } else {
+                alert("No es posible devolver todo su dinero. Se requiere atención.");
+            }
+
+            return false;
+        }
+
+    } else {
+
+        mensaje = "Saldo insuficiente. Le faltan " + (precioCafe - saldoActual) + " pesos.";
+        alert(mensaje);
+
+        saldoActual = saldoActual + parseInt(prompt("Ingrese el dinero que falta:"));
+        alert("Su saldo actual es: " + saldoActual + " pesos.");
+
+        if (saldoActual >= precioCafe) {
+
+            let cambio = saldoActual - precioCafe;
+
+            if (comprobarCambio(cambio) == true) {
+
+                if (cambio > 0) {
+                    devolverCambio(cambio);
+                }
+
+                mensaje = "Su bebida ha sido pagada con éxito.";
+                alert(mensaje);
+                return true;
+
+            } else {
+
+                alert("No tenemos cambio exacto. Se cancela la compra.");
+
+                if (comprobarCambio(saldoActual) == true) {
+                    devolverCambio(saldoActual);
+                    alert("Se devolvió todo su dinero.");
+                } else {
+                    alert("No es posible devolver todo su dinero. Se requiere atención.");
+                }
+
+                return false;
+            }
+
+        } else {
+            mensaje = "Aún falta dinero. No se puede pagar la bebida.";
+            alert(mensaje);
+            return false;
+        }
+    }
 }
 
 
