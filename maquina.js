@@ -93,6 +93,54 @@ const lecheSola = 150;
 const azucarLeche = 4;
 
 
+
+// CONEXIÓN CON HTML
+
+const pantallaSaldo = document.getElementById("credit");
+const formularioSaldo = document.getElementById("balance-form");
+const entradaSaldo = document.getElementById("balance-input");
+const dispensador = document.getElementById("dispenser");
+const salidaBilletes = document.getElementById("bill-output");
+const salidaMonedas = document.getElementById("coin-output");
+
+
+// EVENTO PARA INGRESAR DINERO
+
+formularioSaldo.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    let dineroIngresado = Number(entradaSaldo.value);
+
+    if (dineroIngresado > 0) {
+        saldoActual = saldoActual + dineroIngresado;
+
+        pantallaSaldo.textContent = "$" + saldoActual;
+
+        entradaSaldo.value = "";
+    } else {
+        alert("Ingrese una cantidad válida.");
+    }
+});
+
+// CONECTAR BOTONES DE SELECCIÓN
+
+const botonesBebidas = document.querySelectorAll("[data-select]");
+
+// EVENTO PARA SELECCIONAR UNA BEBIDA
+
+botonesBebidas.forEach(function(boton) {
+
+    boton.addEventListener("click", function() {
+
+        let bebidaSeleccionada = boton.getAttribute("data-select");
+
+        alert("Seleccionaste la bebida número " + bebidaSeleccionada);
+
+    });
+
+});
+
+
 //Funcion - Cobrar Bebida
 
 
