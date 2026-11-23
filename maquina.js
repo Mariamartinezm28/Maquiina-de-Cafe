@@ -132,6 +132,8 @@ function cobrarBebida(saldoActual, precioCafe) {
    
 }
 
+
+
 //Funcion - Agregar AZzucar
 
 function agregarAzucar(precioBebida) {
@@ -144,6 +146,31 @@ function agregarAzucar(precioBebida) {
 
    return precioBebida;
 }
+
+
+// Comprobar si hay cambio
+
+function comprobarCambio(cambio) {
+    let monedas200 = moneda200;
+    let monedas500 = moneda500;
+    let monedas1000 = moneda1000;
+
+
+        }
+    while (cambio >= 1000 && monedas1000 > 0) {
+        cambio = cambio - 1000;
+        monedas1000 = monedas1000 - 1;
+    }
+    while (cambio >= 500 && monedas500 > 0) {
+        cambio = cambio - 500;
+        monedas500 = monedas500 - 1;
+    }
+    while (cambio >= 200 && monedas200 > 0) {
+        cambio = cambio - 200;
+        monedas200 = monedas200 - 1;
+    }
+
+      
 
 // MENU
 
