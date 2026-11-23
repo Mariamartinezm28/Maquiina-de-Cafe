@@ -193,6 +193,72 @@ function comprobarCambio(cambio) {
     return cambio == 0;
 }
 
+
+
+//DEVOLVER CAMBIO
+
+function devolverCambio(cambio) {
+
+    // Billetes de 20.000
+    while (cambio >= 20000 && billete20000 > 0) {
+        cambio = cambio - 20000;
+        billete20000 = billete20000 - 1;
+        alert("Se entregó un billete de $20.000");
+    }
+
+    // Billetes de 10.000
+    while (cambio >= 10000 && billete10000 > 0) {
+        cambio = cambio - 10000;
+        billete10000 = billete10000 - 1;
+        alert("Se entregó un billete de $10.000");
+    }
+
+    // Billetes de 5.000
+    while (cambio >= 5000 && billete5000 > 0) {
+        cambio = cambio - 5000;
+        billete5000 = billete5000 - 1;
+        alert("Se entregó un billete de $5.000");
+    }
+
+    // Billetes de 2.000
+    while (cambio >= 2000 && billete2000 > 0) {
+        cambio = cambio - 2000;
+        billete2000 = billete2000 - 1;
+        alert("Se entregó un billete de $2.000");
+    }
+
+    // Monedas de 1.000
+    while (cambio >= 1000 && moneda1000 > 0) {
+        cambio = cambio - 1000;
+        moneda1000 = moneda1000 - 1;
+        alert("Se entregó una moneda de $1.000");
+    }
+
+    // Monedas de 500
+    while (cambio >= 500 && moneda500 > 0) {
+        cambio = cambio - 500;
+        moneda500 = moneda500 - 1;
+        alert("Se entregó una moneda de $500");
+    }
+
+    // Monedas de 200
+    while (cambio >= 200 && moneda200 > 0) {
+        cambio = cambio - 200;
+        moneda200 = moneda200 - 1;
+        alert("Se entregó una moneda de $200");
+    }
+
+    if (cambio == 0) {
+        alert("¡Cambio entregado correctamente!");
+    } else {
+        alert("No hay dinero suficiente para devolver todo el cambio.");
+        alert("Dinero pendiente: $" + cambio);
+    }
+
+    return cambio;
+}
+
+
 // MENU
 
 
