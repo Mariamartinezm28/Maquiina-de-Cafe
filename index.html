@@ -95,6 +95,27 @@
           <span class="screen__value" id="credit">$0</span>
         </div>
 
+      <!-- Mensajes de la máquina -->
+        <div id="mensaje" class="screen__label" role="status" aria-live="polite">
+          Bienvenido. Seleccione una bebida.
+        </div>
+
+      <!-- OPCIÓN DE AZÚCAR EXTRA -->
+        <div class="sugar-option">
+            <label for="azucar-extra">
+              <input type="checkbox" id="azucar-extra">
+              Agregar azúcar extra (+$200)
+          </label>
+        </div>
+
+        <div id="precio-visible">
+            Selecciona una bebida para ver su precio.
+        </div>
+
+        <button id="comprar-bebida" type="button">
+           COMPRAR BEBIDA
+        </button>
+
         <!-- Formulario de saldo -->
         <form class="balance-form" id="balance-form" autocomplete="off">
           <label class="balance-form__label" for="balance-input">Ingrese su dinero</label>
