@@ -148,15 +148,18 @@ function agregarAzucar(precioBebida) {
 }
 
 
-// Comprobar si hay cambio
+// COMPROBAR SI HAY CAMBIO 
 
 function comprobarCambio(cambio) {
     let monedas200 = moneda200;
     let monedas500 = moneda500;
     let monedas1000 = moneda1000;
+    let billetes2000 = billete2000;
+    let billetes5000 = billete5000;
+    let billetes10000 = billete10000;
+    let billetes20000 = billete20000;
 
-
-        }
+    
     while (cambio >= 1000 && monedas1000 > 0) {
         cambio = cambio - 1000;
         monedas1000 = monedas1000 - 1;
@@ -170,7 +173,25 @@ function comprobarCambio(cambio) {
         monedas200 = monedas200 - 1;
     }
 
-      
+    while (cambio >= 20000 && billetes20000 > 0) {
+        cambio = cambio - 20000;
+        billetes20000 = billetes20000 - 1;
+    }
+    while (cambio >= 10000 && billetes10000 > 0) {
+        cambio = cambio - 10000;
+        billetes10000 = billetes10000 - 1;
+    }
+    while (cambio >= 5000 && billetes5000 > 0) {
+        cambio = cambio - 5000;
+        billetes5000 = billetes5000 - 1;
+    }
+    while (cambio >= 2000 && billetes2000 > 0) {
+        cambio = cambio - 2000;
+        billetes2000 = billetes2000 - 1;
+    }
+
+    return cambio == 0;
+}
 
 // MENU
 
